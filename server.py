@@ -701,6 +701,6 @@ url = f”http://localhost:{PORT}”
 print(f”🌐 → {url}\n   Kapatmak için Ctrl+C\n”)
 pass
 try:
-HTTPServer((””, PORT), Handler).serve_forever()
+HTTPServer((“0.0.0.0”, PORT), Handler).serve_forever()
 except KeyboardInterrupt:
 print(”\n👋 Kapandı.”)
