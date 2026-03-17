@@ -683,10 +683,8 @@ if __name__ == "__main__":
     t1.start()
     t2 = threading.Thread(target=arkaplan, daemon=True)
     t2.start()
-    t1.join()
     url = f"http://localhost:{PORT}"
     print(f"🌐 → {url}\n   Kapatmak için Ctrl+C\n")
-    pass
     try:
         HTTPServer(("0.0.0.0", PORT), Handler).serve_forever()
     except KeyboardInterrupt:
