@@ -146,9 +146,9 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
 .bt-mini-val{font-size:15px;font-weight:800;font-family:'Share Tech Mono',monospace;margin-top:2px}
 
 /* PERFORMANS FİLTRE STİCKY */
-#tab-performans{padding:0;gap:0;overflow:hidden}
-.perf-filtre-header{padding:12px 12px 8px;background:var(--bg);flex-shrink:0}
-#perfListe{flex:1;overflow-y:auto;padding:0 12px 12px;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;gap:6px}
+#tab-performans{padding:0;gap:0;overflow-y:auto}
+.perf-filtre-header{padding:12px 12px 8px;background:var(--bg);position:sticky;top:0;z-index:10}
+#perfListe{padding:0 12px 12px;display:flex;flex-direction:column;gap:6px}
 
 /* PERFORMANS */
 .perf-kart{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:10px}
