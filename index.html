@@ -146,12 +146,9 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
 .bt-mini-val{font-size:15px;font-weight:800;font-family:'Share Tech Mono',monospace;margin-top:2px}
 
 /* PERFORMANS FİLTRE STİCKY */
-#tab-performans .filtre-scroll{
-  position:sticky;top:0;z-index:10;
-  background:var(--bg);
-  margin:-12px -12px 0;
-  padding:12px 12px 8px;
-}
+#tab-performans{padding:0;gap:0;overflow:hidden}
+.perf-filtre-header{padding:12px 12px 8px;background:var(--bg);flex-shrink:0}
+#perfListe{flex:1;overflow-y:auto;padding:0 12px 12px;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;gap:6px}
 
 /* PERFORMANS */
 .perf-kart{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:10px}
@@ -260,15 +257,17 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
 
     <!-- PERFORMANS -->
     <div id="tab-performans" class="page">
-      <div class="filtre-scroll">
-        <button class="filtre-btn" onclick="perfFiltre('15dk',this)">15dk</button>
-        <button class="filtre-btn" onclick="perfFiltre('1sa',this)">1 Saat</button>
-        <button class="filtre-btn" onclick="perfFiltre('4sa',this)">4 Saat</button>
-        <button class="filtre-btn active" onclick="perfFiltre('1G',this)">1 Gün</button>
-        <button class="filtre-btn" onclick="perfFiltre('2G',this)">2 Gün</button>
-        <button class="filtre-btn" onclick="perfFiltre('3G',this)">3 Gün</button>
-        <button class="filtre-btn" onclick="perfFiltre('5G',this)">5 Gün</button>
-        <button class="filtre-btn" onclick="perfFiltre('7G',this)">7 Gün</button>
+      <div class="perf-filtre-header">
+        <div class="filtre-scroll">
+          <button class="filtre-btn" onclick="perfFiltre('15dk',this)">15dk</button>
+          <button class="filtre-btn" onclick="perfFiltre('1sa',this)">1 Saat</button>
+          <button class="filtre-btn" onclick="perfFiltre('4sa',this)">4 Saat</button>
+          <button class="filtre-btn active" onclick="perfFiltre('1G',this)">1 Gün</button>
+          <button class="filtre-btn" onclick="perfFiltre('2G',this)">2 Gün</button>
+          <button class="filtre-btn" onclick="perfFiltre('3G',this)">3 Gün</button>
+          <button class="filtre-btn" onclick="perfFiltre('5G',this)">5 Gün</button>
+          <button class="filtre-btn" onclick="perfFiltre('7G',this)">7 Gün</button>
+        </div>
       </div>
       <div id="perfListe"><div class="loading-wrap" style="color:var(--dim)">Periyot seç</div></div>
     </div>
